@@ -1,0 +1,5 @@
+Acuracia: 0.7077742279020234
+N de atributos selecionados: 12
+Atributos selecionados: 
+['POSITION' 'EHS' 'TOTAL_POT' 'POT_ODDS' 'BOARD_SUIT' 'BOARD_CARDS'
+ 'BOARD_CONNECT' 'PREVIOUS_ACTION' 'BET_VILLAN' 'AGG' 'IP_VS' 'OP_VS']

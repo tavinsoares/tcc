@@ -70,7 +70,6 @@ list_classifier = [
     ["LogisticRegression", LogisticRegression()],
     ["RandomFlorest", RandomForestClassifier()],
     ["DecisionTree", DecisionTreeClassifier()],
-    ["SVM", SVC(kernel='linear')]
 ]
 
 list_parms = [
@@ -79,9 +78,7 @@ list_parms = [
     ["RandomFlorest", "estimator__n_estimators", [2, 4, 8, 16, 32, 64, 128, 256, 512, 1024]],
     ["DecisionTree", "estimator__min_samples_leaf", [2, 5, 10, len(x_train)/100]],
     ["DecisionTree", "estimator__min_samples_split", [2, 5, 10, len(x_train)/100]],
-    ["SVM", "estimator__gamma", [2**4, 2**3, 2**2, 2, 1, 2**-1, 2**-2, 2**-3, 2**-4, 2**-5, 2**-6, 2**-7, 2**-8, 2**-9, 2**-10]],
-    ["SVM", "estimator__C", [2**12, 2**11, 2**10, 2**9, 2**8, 2**7, 2**6, 2**5, 2**4, 2**3, 2**2, 2 , 1,2**-1,2**-2]]
-]
+  ]
 
 for c in list_classifier:
     feature_selection(c)

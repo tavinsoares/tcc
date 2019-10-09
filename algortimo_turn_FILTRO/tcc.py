@@ -35,7 +35,127 @@ parameters = [
 
 listPipes = [
 
-Pipeline([
+	Pipeline([
+	('variance', VarianceThreshold()),
+	('rf', RandomForestClassifier())
+	]),
+
+	Pipeline([
+	('kbest', SelectKBest()),
+	('rf', RandomForestClassifier())
+	]),
+
+	Pipeline([
+	('perc', SelectPercentile()),
+	('rf', RandomForestClassifier())
+	]),
+
+	Pipeline([
+	('fwe', SelectFwe()),
+	('rf', RandomForestClassifier())
+	]),
+
+	Pipeline([
+	('fpr', SelectFpr()),
+	('rf', RandomForestClassifier())
+	]),
+
+	Pipeline([
+	('fdr', SelectFdr()),
+	('rf', RandomForestClassifier())
+	]),
+
+	Pipeline([
+	('variance', VarianceThreshold()),
+	('regression', LogisticRegression())
+	]),
+
+	Pipeline([
+	('kbest', SelectKBest()),
+	('regression', LogisticRegression())
+	]),
+
+	Pipeline([
+	('perc', SelectPercentile()),
+	('regression', LogisticRegression())
+	]),
+
+	Pipeline([
+	('fwe', SelectFwe()),
+	('regression', LogisticRegression())
+	]),
+
+	Pipeline([
+	('fpr', SelectFpr()),
+	('regression', LogisticRegression())
+	]),
+
+	Pipeline([
+	('fdr', SelectFdr()),
+	('regression', LogisticRegression())
+	]),
+
+	Pipeline([
+	('variance', VarianceThreshold()),
+	('naives', GaussianNB())
+	]),
+
+	Pipeline([
+	('kbest', SelectKBest()),
+	('naives', GaussianNB())
+	]),
+
+	Pipeline([
+	('perc', SelectPercentile()),
+	('naives', GaussianNB())
+	]),
+
+	Pipeline([
+	('fwe', SelectFwe()),
+	('naives', GaussianNB())
+	]),
+
+	Pipeline([
+	('fpr', SelectFpr()),
+	('naives', GaussianNB())
+	]),
+
+	Pipeline([
+	('fdr', SelectFdr()),
+	('naives', GaussianNB())
+	]),
+	
+	Pipeline([
+	('variance', VarianceThreshold()),
+	('knn', KNeighborsClassifier())
+	]),
+	
+	Pipeline([
+    ('fwe', SelectFwe()),
+	('knn', KNeighborsClassifier())
+	]),
+
+	Pipeline([
+    ('fpr', SelectFpr()),
+	('knn', KNeighborsClassifier())
+	]),
+	
+	Pipeline([
+	('fdr', SelectFdr()),
+	('knn', KNeighborsClassifier())
+	]),
+
+	Pipeline([
+    ('kbest', SelectKBest()),
+	('knn', KNeighborsClassifier())
+	]),
+
+	Pipeline([
+    ('perc', SelectPercentile()),
+	('knn', KNeighborsClassifier())
+	]),
+	
+	Pipeline([
 	('variance', VarianceThreshold()),
 	('tree', DecisionTreeClassifier())
 	]),
@@ -69,7 +189,7 @@ Pipeline([
 def baseDados():
 	data = []
 
-	with open('ZP-Turn.dat') as csvfile:
+	with open('ZP-Flop.dat') as csvfile:
 	    arq = csv.reader(csvfile, delimiter=' ')
 
 	    for l in arq:
@@ -86,7 +206,7 @@ def baseDados():
 def gravaResultados(dados, atrib):
 
 	for i in dados:
-		fileWrite = open(i[0]+i[1]+".txt","a")
+		fileWrite = open("resultados_flop/"+i[0]+i[1]+".txt","a")
 		for j in i:
 			fileWrite.write(str(j)+" ")
 		fileWrite.write("\n")
@@ -145,12 +265,6 @@ def executa(pipe, parms):
 X, y = baseDados()
 X = np.array(X)
 y = np.array(y)
-
-parameters = {
-
-	
-}
-
 
 for pipe in listPipes:
 	f = pipe.named_steps.keys()[0]

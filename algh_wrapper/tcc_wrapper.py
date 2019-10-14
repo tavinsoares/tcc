@@ -12,7 +12,7 @@ from sklearn.svm import SVC
 def baseDados():
 	data = []
 
-	with open('ZP-Turn.dat') as csvfile:
+	with open('ZP-Flop.dat') as csvfile:
 	    arq = csv.reader(csvfile, delimiter=' ')
 
 	    for l in arq:

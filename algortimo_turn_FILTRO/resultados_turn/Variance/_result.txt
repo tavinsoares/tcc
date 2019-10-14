@@ -1,0 +1,2 @@
+Media de atributos selecionados: 11
+ Atributos: [('AGG', 50), ('BET_VILLAN', 50), ('BOARD_CARDS', 50), ('BOARD_CONNECT', 50), ('EHS', 50), ('POSITION', 50), ('POT_ODDS', 50), ('PREVIOUS_ACTION', 50), ('PREV_ROUND_ACTION', 50), ('IP_VS', 30), ('OP_VS', 27)]

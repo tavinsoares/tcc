@@ -212,7 +212,7 @@ def gravaResultados(dados, atrib):
 		fileWrite.write("\n")
 	
 	for k in atrib:
-		fileWrite.write("\n"+str(features_names[k == True])+" "+str(len(features_names[k == True]))+"\n")
+		fileWrite.write(str(features_names[k == True])+" "+str(len(features_names[k == True]))+"\n")
 
 	fileWrite.close()
 	

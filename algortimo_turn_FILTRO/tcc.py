@@ -189,7 +189,7 @@ listPipes = [
 def baseDados():
 	data = []
 
-	with open('ZP-Flop.dat') as csvfile:
+	with open('../ZPdata/ZP-PreFlop.dat') as csvfile:
 	    arq = csv.reader(csvfile, delimiter=' ')
 
 	    for l in arq:
@@ -206,7 +206,7 @@ def baseDados():
 def gravaResultados(dados, atrib):
 
 	for i in dados:
-		fileWrite = open("resultados_flop/"+i[0]+i[1]+".txt","a")
+		fileWrite = open("resultados_preFlop/"+i[0]+i[1]+".txt","a")
 		for j in i:
 			fileWrite.write(str(j)+" ")
 		fileWrite.write("\n")

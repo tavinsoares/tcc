@@ -189,7 +189,7 @@ listPipes = [
 def baseDados():
 	data = []
 
-	with open('../ZPdata/ZP-PreFlop.dat') as csvfile:
+	with open('../ZPdata/ZP-River.dat') as csvfile:
 	    arq = csv.reader(csvfile, delimiter=' ')
 
 	    for l in arq:

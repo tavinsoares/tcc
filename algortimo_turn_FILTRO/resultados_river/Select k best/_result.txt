@@ -1,0 +1,2 @@
+Media de atributos selecionados: 8
+ Atributos: [('BET_VILLAN', 50), ('BOARD_SUIT', 50), ('EHS', 50), ('IP_VS', 50), ('POT_ODDS', 50), ('POSITION', 40), ('AGG', 37), ('PREVIOUS_ACTION', 30)]

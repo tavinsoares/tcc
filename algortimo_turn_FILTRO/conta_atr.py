@@ -5,12 +5,12 @@ import csv
 ##'resultados_turn\Variance\*.txt'
 
 list_caminho =[
-    'resultados_flop\Variance',
-    'resultados_flop\Percentil',
-    'resultados_flop\Select k best',
-    'resultados_flop\SELECTFDR',
-    'resultados_flop\SELECTFPR',
-    'resultados_flop\SELECTFWE'
+    'resultados_river\Variance',
+    'resultados_river\Percentil',
+    'resultados_river\Select k best',
+    'resultados_river\SELECTFDR',
+    'resultados_river\SELECTFPR',
+    'resultados_river\SELECTFWE'
 ]
 def edita_feature(feature):
     feature = feature.replace("'", "")
